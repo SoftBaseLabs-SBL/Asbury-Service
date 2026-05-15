@@ -1,0 +1,1440 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Asbury Services — Stump Removal & Tree Care · Toledo, OH</title>
+<meta name="description" content="Asbury Services is a Toledo, Ohio tree service specializing in stump grinding & removal. Free quotes — call (419) 388-9884." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --bg: #f3eee2;
+    --bg-2: #ece5d2;
+    --paper: #faf6ec;
+    --ink: #14211a;
+    --ink-2: #2a3a30;
+    --muted: #6b7a6f;
+    --forest: #1f3d20;
+    --forest-deep: #122614;
+    --moss: #4a7c2a;
+    --moss-2: #6ea53d;
+    --bark: #3a2a1c;
+    --bark-2: #5a4327;
+    --soil: #8a6a44;
+    --rule: #d8cdb0;
+    --shadow: 0 1px 0 rgba(20,33,26,.06), 0 24px 60px -28px rgba(20,33,26,.18);
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: "Manrope", system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    font-size: 17px;
+    line-height: 1.55;
+    overflow-x: hidden;
+  }
+  ::selection { background: var(--moss); color: var(--paper); }
+
+  /* paper grain */
+  body::before{
+    content:"";
+    position:fixed; inset:0;
+    pointer-events:none;
+    background-image:
+      radial-gradient(rgba(20,33,26,.035) 1px, transparent 1px),
+      radial-gradient(rgba(20,33,26,.02) 1px, transparent 1px);
+    background-size: 3px 3px, 7px 7px;
+    background-position: 0 0, 1px 2px;
+    mix-blend-mode: multiply;
+    z-index: 1;
+  }
+
+  h1,h2,h3,h4 { font-family: "Archivo", sans-serif; font-weight: 800; letter-spacing: -0.02em; color: var(--forest-deep); margin: 0; }
+  h1 { font-size: clamp(48px, 9vw, 140px); line-height: .92; letter-spacing: -0.035em; }
+  h2 { font-size: clamp(34px, 5.6vw, 76px); line-height: .98; letter-spacing: -0.03em; }
+  h3 { font-size: clamp(22px, 2.4vw, 30px); line-height: 1.15; }
+  p { margin: 0; }
+  a { color: inherit; text-decoration: none; }
+  .mono { font-family: "JetBrains Mono", ui-monospace, monospace; letter-spacing: 0; }
+  .eyebrow {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 12px;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: var(--moss);
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .eyebrow::before {
+    content: "";
+    width: 22px; height: 1px; background: var(--moss);
+  }
+
+  .wrap { max-width: 1320px; margin: 0 auto; padding: 0 32px; position: relative; z-index: 2; }
+  @media (max-width: 720px){ .wrap { padding: 0 20px; } }
+
+  /* ── NAV ─────────────────────────────────────────── */
+  .nav {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    background: color-mix(in oklab, var(--bg) 78%, transparent);
+    border-bottom: 1px solid transparent;
+    transition: border-color .25s ease, background .25s ease;
+  }
+  .nav.is-stuck { border-color: var(--rule); }
+  .nav-inner {
+    display: flex; align-items: center; justify-content: space-between;
+    height: 76px;
+  }
+  .brand {
+    display: flex; align-items: center; gap: 12px;
+    font-family: "Archivo", sans-serif; font-weight: 800;
+    letter-spacing: .02em;
+    color: var(--forest-deep);
+  }
+  .brand img { width: 40px; height: 40px; object-fit: contain; mix-blend-mode: multiply; }
+  .brand .name { font-size: 18px; line-height: 1; }
+  .brand .sub  { display:block; font-size: 10px; letter-spacing: .25em; color: var(--moss); font-weight:600; text-transform:uppercase; margin-top:4px; }
+  .nav-links { display: flex; gap: 28px; align-items: center; }
+  .nav-links a {
+    font-size: 14px; color: var(--ink-2); font-weight: 500;
+    position: relative;
+  }
+  .nav-links a:hover { color: var(--forest); }
+  .nav-cta { display: flex; gap: 12px; align-items: center; }
+  .phone-link { display: inline-flex; align-items: center; gap: 8px; font-weight: 600; font-size: 14px; color: var(--forest-deep); }
+  .phone-link .dot { width:8px; height:8px; border-radius:50%; background: var(--moss-2); box-shadow: 0 0 0 4px color-mix(in oklab, var(--moss-2) 25%, transparent); animation: pulse 2.2s infinite; }
+  @keyframes pulse { 0%,100% { opacity: 1; transform: scale(1);} 50% { opacity:.6; transform:scale(.85);} }
+
+  .btn {
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 12px 18px;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 14px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: transform .15s ease, background .2s ease, color .2s ease, border-color .2s ease;
+    font-family: inherit;
+  }
+  .btn-primary { background: var(--forest-deep); color: var(--paper); }
+  .btn-primary:hover { background: var(--forest); transform: translateY(-1px); }
+  .btn-ghost { background: transparent; color: var(--forest-deep); border-color: var(--ink); }
+  .btn-ghost:hover { background: var(--ink); color: var(--paper); }
+  .btn .arrow { width: 14px; height: 14px; }
+  @media (max-width: 860px){
+    .nav-links { display: none; }
+    .brand .name { font-size: 16px; }
+    .phone-link span.num { display:none; }
+  }
+
+  /* ── HERO ────────────────────────────────────────── */
+  .hero {
+    position: relative;
+    padding: 80px 0 60px;
+    overflow: hidden;
+  }
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 56px;
+    align-items: end;
+  }
+  @media (max-width: 920px){ .hero-grid { grid-template-columns: 1fr; gap: 28px; } }
+  .hero h1 .grad {
+    background: linear-gradient(180deg, var(--forest) 0%, var(--moss) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-style: italic;
+    font-weight: 600;
+  }
+  .hero-lede { max-width: 520px; color: var(--ink-2); font-size: clamp(16px, 1.6vw, 19px); margin-top: 28px; }
+  .hero-meta { display: flex; gap: 28px; margin-top: 36px; flex-wrap: wrap; }
+  .hero-meta .m { display:flex; flex-direction:column; gap:4px; }
+  .hero-meta .k { font-size: 11px; letter-spacing: .18em; text-transform: uppercase; color: var(--muted); font-family: "JetBrains Mono", monospace; }
+  .hero-meta .v { font-family: "Archivo", sans-serif; font-weight: 700; color: var(--forest-deep); font-size: 18px; }
+  .stars { display:inline-flex; gap:2px; color: #c98a1f; }
+
+  .hero-ctas { display: flex; gap: 12px; margin-top: 32px; flex-wrap: wrap; }
+
+  .hero-card {
+    position: relative;
+    aspect-ratio: 4/5;
+    border-radius: 18px;
+    background:
+      linear-gradient(135deg, #2a4a2c 0%, #1a3018 60%, #0d1a0a 100%);
+    border: 1px solid var(--rule);
+    overflow: hidden;
+    display: flex; flex-direction: column; justify-content: space-between;
+    padding: 22px;
+    box-shadow: var(--shadow);
+  }
+  .hero-card .photo {
+    position: absolute; inset: 0;
+    background-size: cover;
+    background-position: center;
+    background-image: url("https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1200&q=80");
+  }
+  .hero-card::after {
+    content: "";
+    position: absolute; inset: 0;
+    background:
+      linear-gradient(180deg, rgba(13,26,10,0) 30%, rgba(13,26,10,.65) 80%, rgba(13,26,10,.85) 100%),
+      linear-gradient(0deg, rgba(13,26,10,.2), rgba(13,26,10,.2));
+    pointer-events: none;
+  }
+  .hero-card > * { position: relative; z-index: 2; }
+  .hero-card .tag {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: rgba(13,26,10,.6); color: var(--paper);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    padding: 8px 12px; border-radius: 999px;
+    font-size: 11px; letter-spacing: .18em; text-transform: uppercase;
+    width: fit-content;
+    font-family: "JetBrains Mono", monospace;
+    border: 1px solid rgba(255,255,255,.12);
+  }
+  .hero-card .tag::before { content:""; width:6px; height:6px; border-radius:50%; background: var(--moss-2); }
+  .hero-card .caption {
+    color: var(--paper);
+    font-family: "Archivo", sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.15;
+    letter-spacing: -.02em;
+    max-width: 18ch;
+  }
+  .hero-card .caption .sub {
+    display:block;
+    margin-top: 8px;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: color-mix(in oklab, var(--paper) 70%, transparent);
+  }
+
+  .marquee {
+    margin-top: 96px;
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+    overflow: hidden;
+    background: var(--paper);
+  }
+  .marquee-track {
+    display: flex;
+    gap: 56px;
+    padding: 18px 0;
+    animation: scroll 38s linear infinite;
+    width: max-content;
+    font-family: "Archivo", sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--forest-deep);
+    text-transform: uppercase;
+    letter-spacing: .02em;
+  }
+  .marquee-track span { display:inline-flex; align-items:center; gap: 56px; }
+  .marquee-track .dot { width:8px; height:8px; border-radius:50%; background: var(--moss-2); display:inline-block; }
+  @keyframes scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+  /* ── STUMP REMOVAL SCROLL SCENE ──────────────────── */
+  .scene {
+    position: relative;
+    background: var(--forest-deep);
+    color: var(--paper);
+    /* no overflow:hidden — it breaks position:sticky on descendants */
+  }
+  .scene-sticky-clip { position: relative; overflow: hidden; }
+  .scene::before {
+    content:"";
+    position:absolute; inset:0;
+    background:
+      radial-gradient(ellipse 60% 40% at 50% 0%, color-mix(in oklab, var(--moss) 30%, transparent), transparent 70%),
+      radial-gradient(ellipse 70% 50% at 50% 100%, color-mix(in oklab, var(--bark-2) 35%, transparent), transparent 70%);
+    pointer-events: none;
+  }
+  .scene-wrap {
+    height: 360vh; /* the long scroll track */
+    position: relative;
+  }
+  .scene-sticky {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 40px;
+    padding: 0 48px;
+  }
+  @media (max-width: 920px){
+    .scene-sticky { grid-template-columns: 1fr; padding: 0 20px; gap: 0; }
+  }
+
+  .scene-copy { position: relative; z-index: 3; }
+  .scene-copy .eyebrow { color: var(--moss-2); }
+  .scene-copy .eyebrow::before { background: var(--moss-2); }
+  .scene-copy h2 { color: var(--paper); margin-top: 18px; max-width: 14ch; }
+  .scene-copy .phase {
+    margin-top: 36px;
+    border-left: 2px solid color-mix(in oklab, var(--moss-2) 50%, transparent);
+    padding-left: 22px;
+    min-height: 168px;
+  }
+  .phase-item {
+    opacity: .25;
+    transition: opacity .4s ease, transform .4s ease;
+    transform: translateY(8px);
+    padding: 10px 0;
+  }
+  .phase-item.is-active { opacity: 1; transform: translateY(0); }
+  .phase-item .num { font-family: "JetBrains Mono", monospace; font-size: 11px; letter-spacing: .2em; color: var(--moss-2); text-transform: uppercase; }
+  .phase-item .ttl { font-family: "Archivo", sans-serif; font-weight: 800; font-size: clamp(20px, 2.2vw, 26px); color: var(--paper); margin-top: 4px; letter-spacing: -.02em; }
+  .phase-item .txt { color: color-mix(in oklab, var(--paper) 75%, transparent); font-size: 15px; margin-top: 6px; max-width: 38ch; }
+
+  .scene-stage {
+    position: relative;
+    aspect-ratio: 1/1;
+    width: 100%;
+    max-width: 620px;
+    justify-self: center;
+  }
+  .scene-stage svg { width: 100%; height: 100%; display: block; }
+
+  .progress-rail {
+    position: absolute;
+    left: 48px; right: 48px; bottom: 36px;
+    height: 2px;
+    background: color-mix(in oklab, var(--paper) 12%, transparent);
+    z-index: 3;
+  }
+  .progress-rail .fill { position:absolute; left:0; top:0; bottom:0; background: var(--moss-2); width: 0%; transition: width .1s linear; }
+  .progress-rail .pct { position:absolute; right: 0; top:-22px; font-family: "JetBrains Mono", monospace; font-size: 11px; letter-spacing: .15em; color: color-mix(in oklab, var(--paper) 70%, transparent); }
+  @media (max-width: 920px){
+    .progress-rail { left: 20px; right: 20px; bottom: 20px; }
+    .scene-stage { max-width: 360px; }
+  }
+
+  /* ── SERVICES ────────────────────────────────────── */
+  .section { padding: 120px 0; position: relative; }
+  .section-head { display: flex; justify-content: space-between; align-items: end; gap: 40px; margin-bottom: 56px; flex-wrap: wrap; }
+  .section-head h2 { max-width: 16ch; }
+  .section-head .lede { max-width: 380px; color: var(--ink-2); font-size: 17px; }
+
+  .services {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 18px;
+  }
+  .svc {
+    grid-column: span 6;
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    border-radius: 18px;
+    padding: 32px;
+    display: flex; flex-direction: column;
+    min-height: 320px;
+    position: relative;
+    transition: transform .25s ease, border-color .25s ease, background .25s ease;
+  }
+  .svc:hover { transform: translateY(-3px); border-color: var(--forest); }
+  .svc.feat { grid-column: span 12; background: var(--forest-deep); color: var(--paper); border-color: var(--forest-deep); min-height: 360px; padding: 44px; display:grid; grid-template-columns: 1fr 1fr; align-items: end; gap: 40px; }
+  .svc.feat h3, .svc.feat .num { color: var(--paper); }
+  .svc.feat .desc { color: color-mix(in oklab, var(--paper) 78%, transparent); }
+  .svc.feat .feat-art {
+    aspect-ratio: 4/3; border-radius: 12px;
+    background:
+      linear-gradient(135deg, #4a3a22 0%, #2a1d10 100%);
+    position: relative; overflow: hidden; align-self: stretch;
+    border: 1px solid rgba(255,255,255,.06);
+  }
+  .svc.feat .feat-art .photo {
+    position: absolute; inset: 0;
+    background-image: url("https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?auto=format&fit=crop&w=1400&q=80");
+    background-size: cover; background-position: center;
+  }
+  .svc.feat .feat-art::after {
+    content: "";
+    position: absolute; inset: 0;
+    background:
+      linear-gradient(180deg, transparent 40%, rgba(13,26,10,.7) 100%),
+      linear-gradient(0deg, rgba(13,26,10,.15), rgba(13,26,10,.15));
+  }
+  .svc.feat .feat-art .tag {
+    position: absolute; left: 16px; bottom: 14px; z-index: 2;
+    font-family: "JetBrains Mono", monospace; font-size: 10px; letter-spacing: .2em;
+    color: var(--paper);
+    background: rgba(13,26,10,.55);
+    backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
+    border: 1px solid rgba(255,255,255,.12);
+    padding: 6px 10px; border-radius: 999px;
+    text-transform: uppercase;
+    display: inline-flex; align-items: center; gap: 8px;
+  }
+  .svc.feat .feat-art .tag::before { content:""; width:5px; height:5px; border-radius:50%; background: var(--moss-2); }
+  .svc .num { font-family: "JetBrains Mono", monospace; font-size: 11px; letter-spacing: .2em; color: var(--moss); text-transform: uppercase; }
+  .svc h3 { margin-top: auto; padding-top: 24px; }
+  .svc .desc { color: var(--ink-2); margin-top: 12px; font-size: 15px; max-width: 38ch; }
+  .svc .glyph { width: 56px; height: 56px; border-radius: 14px; background: color-mix(in oklab, var(--moss) 14%, var(--bg)); display:flex; align-items:center; justify-content:center; }
+  .svc.feat .glyph { background: color-mix(in oklab, var(--moss-2) 28%, transparent); }
+  .glyph svg { width: 28px; height: 28px; stroke: var(--forest); stroke-width: 1.6; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+  .svc.feat .glyph svg { stroke: var(--moss-2); }
+  @media (max-width: 860px){
+    .svc { grid-column: span 12; padding: 24px; min-height: 240px; }
+    .svc.feat { grid-template-columns: 1fr; padding: 28px; }
+  }
+
+  /* ── PROCESS ─────────────────────────────────────── */
+  .process { background: var(--paper); border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+  .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; counter-reset: step; }
+  .step {
+    border-top: 1px solid var(--rule);
+    padding-top: 18px;
+    position: relative;
+  }
+  .step .n { font-family: "Archivo", sans-serif; font-weight: 800; font-size: 38px; color: var(--moss); line-height: 1; }
+  .step h4 { font-family: "Archivo", sans-serif; font-size: 20px; margin-top: 12px; color: var(--forest-deep); letter-spacing: -.02em; }
+  .step p { color: var(--ink-2); font-size: 15px; margin-top: 8px; }
+  @media (max-width: 820px){ .steps { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 520px){ .steps { grid-template-columns: 1fr; } }
+
+  /* ── REVIEWS ─────────────────────────────────────── */
+  .reviews-head {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: end;
+    gap: 32px;
+    margin-bottom: 48px;
+    padding-bottom: 28px;
+    border-bottom: 1px solid var(--rule);
+  }
+  .rating-chip {
+    display: flex; flex-direction: column; align-items: flex-end; gap: 8px;
+  }
+  .rating-chip .num { font-family: "Archivo", sans-serif; font-weight: 800; font-size: 64px; line-height: 1; letter-spacing: -.04em; color: var(--forest-deep); }
+  .rating-chip .num small { font-size: 22px; color: var(--muted); margin-left: 6px; }
+  .rating-chip .stars-big { display:flex; gap: 4px; color: #c98a1f; font-size: 22px; }
+  .rating-chip .src { font-family: "JetBrains Mono", monospace; font-size: 11px; letter-spacing: .2em; text-transform: uppercase; color: var(--muted); }
+
+  .review-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .review {
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    border-radius: 18px;
+    padding: 32px;
+    display: flex; flex-direction: column; gap: 20px;
+    position: relative;
+  }
+  .review .quote-mark { font-family: "Archivo", sans-serif; font-weight: 900; font-size: 64px; line-height: .6; color: var(--moss); }
+  .review blockquote { margin: 0; font-family: "Archivo", sans-serif; font-weight: 600; font-size: clamp(20px, 2vw, 26px); line-height: 1.25; color: var(--forest-deep); letter-spacing: -.02em; }
+  .review .who { display:flex; justify-content: space-between; align-items: center; padding-top: 18px; border-top: 1px solid var(--rule); }
+  .review .who .name { font-weight: 700; color: var(--forest-deep); font-size: 15px; }
+  .review .who .meta { font-family: "JetBrains Mono", monospace; font-size: 11px; letter-spacing: .15em; text-transform: uppercase; color: var(--muted); }
+  @media (max-width: 720px){ .review-grid { grid-template-columns: 1fr; } .reviews-head { grid-template-columns: 1fr; } .rating-chip { align-items: flex-start; } }
+
+  /* ── AREA ────────────────────────────────────────── */
+  .area-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 56px; align-items: center; }
+  .area-map {
+    background: #f6eedb;
+    border: 1px solid var(--rule);
+    border-radius: 18px;
+    aspect-ratio: 4/3;
+    position: relative;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+  }
+  .area-map svg { width: 100%; height: 100%; display:block; }
+  .area-map .map-corner {
+    position: absolute; left: 18px; top: 16px;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 10px; letter-spacing: .22em; text-transform: uppercase;
+    color: var(--ink-2);
+    white-space: nowrap;
+  }
+  .area-map .map-corner b { color: var(--forest-deep); font-weight: 700; }
+  .area-map .map-corner .rule { display:inline-block; width: 24px; height: 1px; background: var(--ink-2); vertical-align: middle; margin-right: 10px; }
+  .city-list { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 28px; margin-top: 28px; }
+  .city-list li { display:flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid var(--rule); list-style: none; font-size: 15px; color: var(--ink-2); }
+  .city-list li .mi { font-family: "JetBrains Mono", monospace; font-size: 12px; color: var(--muted); }
+  .city-list { padding: 0; margin: 28px 0 0; }
+  @media (max-width: 820px){ .area-grid { grid-template-columns: 1fr; } }
+
+  /* ── CONTACT / CTA ───────────────────────────────── */
+  .cta {
+    background: var(--forest-deep);
+    color: var(--paper);
+    position: relative;
+    overflow: hidden;
+  }
+  .cta::before {
+    content:"";
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse 50% 60% at 80% 20%, color-mix(in oklab, var(--moss) 35%, transparent), transparent 60%),
+      radial-gradient(ellipse 40% 50% at 10% 90%, color-mix(in oklab, var(--moss-2) 30%, transparent), transparent 60%);
+    opacity: .6; pointer-events: none;
+  }
+  .cta-inner { display: grid; grid-template-columns: 1.2fr .8fr; gap: 64px; position: relative; z-index: 2; }
+  .cta h2 { color: var(--paper); max-width: 14ch; }
+  .cta .lede { color: color-mix(in oklab, var(--paper) 78%, transparent); margin-top: 20px; max-width: 44ch; font-size: 17px; }
+  .cta-card {
+    background: color-mix(in oklab, var(--paper) 8%, transparent);
+    border: 1px solid color-mix(in oklab, var(--paper) 16%, transparent);
+    border-radius: 18px;
+    padding: 32px;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+  .cta-row {
+    display:flex; align-items:center; justify-content: space-between; gap: 16px;
+    padding: 18px 0;
+    border-bottom: 1px solid color-mix(in oklab, var(--paper) 12%, transparent);
+  }
+  .cta-row:last-of-type { border-bottom: 0; }
+  .cta-row .k { font-family: "JetBrains Mono", monospace; font-size: 11px; letter-spacing: .2em; text-transform: uppercase; color: color-mix(in oklab, var(--moss-2) 90%, transparent); }
+  .cta-row .v { font-family: "Archivo", sans-serif; font-weight: 700; font-size: 18px; color: var(--paper); }
+  .cta-row .v.big { font-size: clamp(24px, 3vw, 36px); letter-spacing: -.02em; }
+  .btn-cta { background: var(--moss-2); color: var(--forest-deep); padding: 14px 22px; font-size: 15px; }
+  .btn-cta:hover { background: var(--paper); }
+  .btn-line { background: transparent; color: var(--paper); border: 1px solid color-mix(in oklab, var(--paper) 30%, transparent); padding: 14px 22px; font-size: 15px; }
+  .btn-line:hover { background: var(--paper); color: var(--forest-deep); }
+  .cta-buttons { display: flex; gap: 12px; margin-top: 28px; flex-wrap: wrap; }
+  @media (max-width: 860px){ .cta-inner { grid-template-columns: 1fr; gap: 32px; } }
+
+  /* ── FOOTER ──────────────────────────────────────── */
+  footer { background: #0c1a10; color: color-mix(in oklab, var(--paper) 70%, transparent); padding: 60px 0 28px; }
+  .foot-top { display:grid; grid-template-columns: 1.3fr 1fr 1fr 1fr; gap: 32px; padding-bottom: 40px; border-bottom: 1px solid color-mix(in oklab, var(--paper) 10%, transparent); }
+  .foot-top h5 { font-family: "JetBrains Mono", monospace; font-size: 11px; letter-spacing: .25em; text-transform: uppercase; color: color-mix(in oklab, var(--paper) 50%, transparent); font-weight: 500; margin: 0 0 16px; }
+  .foot-top ul { list-style: none; padding: 0; margin: 0; display:flex; flex-direction: column; gap: 10px; }
+  .foot-top a { color: var(--paper); font-size: 14px; }
+  .foot-top a:hover { color: var(--moss-2); }
+  .foot-mark { display: flex; align-items: center; gap: 12px; font-family: "Archivo", sans-serif; font-weight: 800; color: var(--paper); }
+  .foot-mark img { width: 44px; height: 44px; object-fit: contain; background: var(--paper); border-radius: 10px; padding: 4px; }
+  .foot-mark .sub { display:block; font-size: 11px; letter-spacing: .22em; color: var(--moss-2); font-weight: 600; text-transform: uppercase; margin-top: 4px; }
+  .foot-bottom { display: flex; justify-content: space-between; padding-top: 24px; font-family: "JetBrains Mono", monospace; font-size: 11px; letter-spacing: .15em; text-transform: uppercase; color: color-mix(in oklab, var(--paper) 45%, transparent); }
+  @media (max-width: 760px){ .foot-top { grid-template-columns: 1fr 1fr; } .foot-bottom { flex-direction: column; gap: 12px; } }
+
+  /* ── REVEAL ──────────────────────────────────────── */
+  .reveal { opacity: 0; transform: translateY(20px); transition: opacity .8s ease, transform .8s ease; }
+  .reveal.is-in { opacity: 1; transform: translateY(0); }
+
+  /* sticky CTA on mobile */
+  .mobile-call {
+    display: none;
+    position: fixed; left: 16px; right: 16px; bottom: 16px; z-index: 40;
+    background: var(--forest-deep); color: var(--paper);
+    padding: 14px 18px; border-radius: 999px;
+    align-items: center; justify-content: space-between;
+    box-shadow: 0 16px 40px -16px rgba(0,0,0,.5);
+    font-weight: 700; font-size: 15px;
+  }
+  .mobile-call .num { color: var(--moss-2); }
+  @media (max-width: 720px){ .mobile-call { display: flex; } body { padding-bottom: 80px; } }
+
+</style>
+</head>
+<body>
+
+<!-- ─────────────── NAV ─────────────── -->
+<header class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a href="#top" class="brand" aria-label="Asbury Services home">
+      <img src="assets/asbury-logo.png" alt="" />
+      <div>
+        <div class="name">ASBURY SERVICES</div>
+        <span class="sub">Tree &amp; Stump · Toledo</span>
+      </div>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#services">Services</a>
+      <a href="#how">Process</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#area">Service Area</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="phone-link" href="tel:+14193889884">
+        <span class="dot"></span>
+        <span class="num">(419) 388-9884</span>
+      </a>
+      <a href="#contact" class="btn btn-primary">
+        Free Quote
+        <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+  </div>
+</header>
+
+<!-- ─────────────── HERO ─────────────── -->
+<section class="hero" id="top">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <span class="eyebrow">Toledo, OH · Est. Local · Fully Insured</span>
+        <h1 style="margin-top:18px;">
+          Stumps,<br/>
+          <span class="grad">gone.</span>
+        </h1>
+        <p class="hero-lede">
+          Asbury Services grinds out tree stumps clean to 8&Prime; below grade — so your lawn, your mower, and your weekends get their space back. Toledo &amp; surrounding areas.
+        </p>
+        <div class="hero-ctas">
+          <a href="tel:+14193889884" class="btn btn-primary">
+            Call (419) 388-9884
+            <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </a>
+          <a href="#contact" class="btn btn-ghost">Get a Free Quote</a>
+        </div>
+
+        <div class="hero-meta">
+          <div class="m">
+            <span class="k">Rating</span>
+            <span class="v"><span class="stars">★★★★★</span> 5.0 Google</span>
+          </div>
+          <div class="m">
+            <span class="k">Response</span>
+            <span class="v">Same-day quotes</span>
+          </div>
+          <div class="m">
+            <span class="k">Coverage</span>
+            <span class="v">Lucas &amp; Wood Counties</span>
+          </div>
+        </div>
+      </div>
+
+      <aside class="hero-card">
+        <div class="photo" role="img" aria-label="Forest canopy in northwest Ohio"></div>
+        <div class="tag">Toledo · NW Ohio</div>
+        <div class="caption">
+          Hardwood country.<br/>We know its stumps.
+          <span class="sub">Lucas &amp; Wood Counties · 419</span>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>Stump Grinding <i class="dot"></i> Tree Removal <i class="dot"></i> Storm Cleanup <i class="dot"></i> Trimming &amp; Pruning <i class="dot"></i> Lot Clearing <i class="dot"></i> Mulch Hauling <i class="dot"></i> Emergency Calls <i class="dot"></i></span>
+      <span>Stump Grinding <i class="dot"></i> Tree Removal <i class="dot"></i> Storm Cleanup <i class="dot"></i> Trimming &amp; Pruning <i class="dot"></i> Lot Clearing <i class="dot"></i> Mulch Hauling <i class="dot"></i> Emergency Calls <i class="dot"></i></span>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────────── STUMP REMOVAL SCROLL SCENE ─────────────── -->
+<section class="scene" id="scene" aria-label="Stump removal process">
+  <div class="scene-wrap">
+    <div class="scene-sticky">
+      <div class="scene-copy">
+        <span class="eyebrow">Watch · Scroll to grind</span>
+        <h2>How a stump<br/>disappears.</h2>
+        <div class="phase">
+          <div class="phase-item is-active" data-phase="0">
+            <div class="num">01 / Arrive</div>
+            <div class="ttl">We size up the stump.</div>
+            <div class="txt">Diameter, root flare, what's underneath. Then we mark utilities and stage the grinder.</div>
+          </div>
+          <div class="phase-item" data-phase="1">
+            <div class="num">02 / Grind</div>
+            <div class="ttl">Carbide teeth do the work.</div>
+            <div class="txt">A self-propelled grinder chews through hardwood in passes — quiet enough for the neighbors.</div>
+          </div>
+          <div class="phase-item" data-phase="2">
+            <div class="num">03 / Below grade</div>
+            <div class="ttl">Down 8&Prime;, every time.</div>
+            <div class="txt">Deep enough to plant grass, lay sod, or pour concrete. No more tripping hazard, no more mower scars.</div>
+          </div>
+          <div class="phase-item" data-phase="3">
+            <div class="num">04 / Mulched &amp; clean</div>
+            <div class="ttl">We backfill with the chips.</div>
+            <div class="txt">Mulch goes in the hole, the lawn gets raked, and we haul off anything you don't want. Site swept.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="scene-stage">
+        <svg viewBox="0 0 600 600" id="stump-svg" preserveAspectRatio="xMidYMid meet">
+          <defs>
+            <radialGradient id="stumpTopGrad" cx="50%" cy="50%" r="55%">
+              <stop offset="0%" stop-color="#c89763"/>
+              <stop offset="60%" stop-color="#8b6232"/>
+              <stop offset="100%" stop-color="#4d3819"/>
+            </radialGradient>
+            <linearGradient id="barkGrad" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%" stop-color="#2c1d0d"/>
+              <stop offset="50%" stop-color="#5a4023"/>
+              <stop offset="100%" stop-color="#2c1d0d"/>
+            </linearGradient>
+            <linearGradient id="groundGrad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#3a5728"/>
+              <stop offset="40%" stop-color="#2a3a1c"/>
+              <stop offset="100%" stop-color="#1a2412"/>
+            </linearGradient>
+            <linearGradient id="grinderBody" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#f6b934"/>
+              <stop offset="100%" stop-color="#c58a16"/>
+            </linearGradient>
+            <radialGradient id="wheelGrad" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#5a5550"/>
+              <stop offset="80%" stop-color="#2a2825"/>
+              <stop offset="100%" stop-color="#111"/>
+            </radialGradient>
+            <pattern id="grassPat" x="0" y="0" width="14" height="14" patternUnits="userSpaceOnUse">
+              <path d="M2 14 L4 8 M7 14 L9 6 M12 14 L13 9" stroke="#5a8a32" stroke-width="1.2" stroke-linecap="round"/>
+            </pattern>
+          </defs>
+
+          <!-- sky/back fill -->
+          <rect x="0" y="0" width="600" height="600" fill="transparent"/>
+
+          <!-- distant trees (silhouette) -->
+          <g opacity=".25" fill="#0a1808">
+            <circle cx="60" cy="380" r="44"/>
+            <rect x="56" y="380" width="8" height="40"/>
+            <circle cx="540" cy="370" r="50"/>
+            <rect x="536" y="370" width="8" height="50"/>
+            <circle cx="120" cy="400" r="30"/>
+            <rect x="116" y="400" width="6" height="24"/>
+            <circle cx="480" cy="395" r="34"/>
+            <rect x="476" y="395" width="6" height="28"/>
+          </g>
+
+          <!-- ground -->
+          <rect x="0" y="420" width="600" height="180" fill="url(#groundGrad)"/>
+          <rect x="0" y="420" width="600" height="20" fill="url(#grassPat)" opacity=".8"/>
+          <line x1="0" y1="420" x2="600" y2="420" stroke="#1a2412" stroke-width="1"/>
+
+          <!-- soil texture dots -->
+          <g fill="#4a3826" opacity=".4">
+            <circle cx="80" cy="490" r="2"/><circle cx="140" cy="520" r="1.5"/><circle cx="220" cy="500" r="2"/>
+            <circle cx="380" cy="510" r="1.8"/><circle cx="460" cy="490" r="2"/><circle cx="530" cy="540" r="1.5"/>
+            <circle cx="60" cy="550" r="2"/><circle cx="320" cy="560" r="1.8"/><circle cx="180" cy="540" r="2.2"/>
+          </g>
+
+          <!-- root mound (revealed when stump gone) -->
+          <ellipse id="mound" cx="300" cy="430" rx="120" ry="14" fill="#3a2818" opacity="0"/>
+          <!-- mulch fill -->
+          <g id="mulch" opacity="0">
+            <ellipse cx="300" cy="428" rx="110" ry="12" fill="#5a3820"/>
+            <ellipse cx="280" cy="425" rx="14" ry="4" fill="#7a4a26" transform="rotate(-12 280 425)"/>
+            <ellipse cx="310" cy="427" rx="16" ry="4" fill="#7a4a26" transform="rotate(8 310 427)"/>
+            <ellipse cx="335" cy="425" rx="12" ry="3.5" fill="#8a5a30" transform="rotate(20 335 425)"/>
+            <ellipse cx="260" cy="428" rx="13" ry="3" fill="#8a5a30" transform="rotate(-25 260 428)"/>
+            <ellipse cx="295" cy="423" rx="10" ry="3" fill="#a06840" transform="rotate(5 295 423)"/>
+            <ellipse cx="320" cy="430" rx="11" ry="3" fill="#a06840" transform="rotate(-8 320 430)"/>
+          </g>
+
+          <!-- STUMP GROUP -->
+          <g id="stump">
+            <!-- shadow -->
+            <ellipse id="stump-shadow" cx="300" cy="426" rx="105" ry="10" fill="rgba(0,0,0,.35)"/>
+            <!-- trunk side -->
+            <rect id="stump-side" x="210" y="280" width="180" height="146" fill="url(#barkGrad)"/>
+            <!-- bark vertical grooves -->
+            <g id="bark-lines" stroke="#1c120a" stroke-width="1.4" opacity=".7">
+              <line x1="225" y1="280" x2="220" y2="426"/>
+              <line x1="248" y1="280" x2="246" y2="426"/>
+              <line x1="270" y1="280" x2="272" y2="426"/>
+              <line x1="296" y1="280" x2="298" y2="426"/>
+              <line x1="320" y1="280" x2="322" y2="426"/>
+              <line x1="344" y1="280" x2="346" y2="426"/>
+              <line x1="368" y1="280" x2="370" y2="426"/>
+              <line x1="384" y1="280" x2="380" y2="426"/>
+            </g>
+            <!-- top ellipse -->
+            <ellipse id="stump-top" cx="300" cy="280" rx="90" ry="22" fill="url(#stumpTopGrad)" stroke="#2c1d0d" stroke-width="2"/>
+            <!-- tree rings -->
+            <g id="rings" fill="none" stroke="#3d2810" stroke-width="1.2" opacity=".85">
+              <ellipse cx="300" cy="280" rx="74" ry="17"/>
+              <ellipse cx="300" cy="280" rx="58" ry="13"/>
+              <ellipse cx="302" cy="281" rx="42" ry="9"/>
+              <ellipse cx="298" cy="280" rx="26" ry="6"/>
+              <ellipse cx="300" cy="280" rx="10" ry="3"/>
+            </g>
+            <!-- highlight -->
+            <ellipse cx="280" cy="275" rx="40" ry="6" fill="#d9a368" opacity=".5"/>
+          </g>
+
+          <!-- CHIPS (wood debris) -->
+          <g id="chips"></g>
+
+          <!-- DUST CLOUD -->
+          <g id="dust" opacity="0">
+            <circle cx="300" cy="300" r="40" fill="#a89878" opacity=".5"/>
+            <circle cx="260" cy="290" r="30" fill="#a89878" opacity=".4"/>
+            <circle cx="340" cy="295" r="34" fill="#a89878" opacity=".4"/>
+            <circle cx="280" cy="270" r="26" fill="#bfb094" opacity=".5"/>
+            <circle cx="320" cy="275" r="28" fill="#bfb094" opacity=".5"/>
+          </g>
+
+          <!-- GRINDER -->
+          <g id="grinder" transform="translate(700, 380)">
+            <!-- shadow under grinder -->
+            <ellipse cx="40" cy="50" rx="70" ry="6" fill="rgba(0,0,0,.4)"/>
+            <!-- arm to wheel -->
+            <rect x="-30" y="-5" width="80" height="14" rx="3" fill="#2a2825"/>
+            <!-- body -->
+            <rect x="20" y="-50" width="110" height="60" rx="6" fill="url(#grinderBody)" stroke="#7a5208" stroke-width="2"/>
+            <rect x="34" y="-42" width="40" height="22" rx="2" fill="#1a1a18"/>
+            <text x="84" y="-26" fill="#1a1a18" font-family="Archivo" font-weight="800" font-size="11" letter-spacing="1">ASBURY</text>
+            <text x="84" y="-12" fill="#1a1a18" font-family="JetBrains Mono" font-size="7" letter-spacing="1">SG-3500</text>
+            <!-- exhaust -->
+            <rect x="116" y="-62" width="8" height="14" fill="#2a2825"/>
+            <circle cx="120" cy="-66" r="3" fill="#3a3835"/>
+            <!-- treads -->
+            <rect x="20" y="14" width="110" height="22" rx="4" fill="#1a1816"/>
+            <g fill="#3a3835">
+              <rect x="26" y="18" width="6" height="14"/>
+              <rect x="40" y="18" width="6" height="14"/>
+              <rect x="54" y="18" width="6" height="14"/>
+              <rect x="68" y="18" width="6" height="14"/>
+              <rect x="82" y="18" width="6" height="14"/>
+              <rect x="96" y="18" width="6" height="14"/>
+              <rect x="110" y="18" width="6" height="14"/>
+              <rect x="118" y="18" width="6" height="14"/>
+            </g>
+            <!-- wheel housing -->
+            <circle cx="-20" cy="2" r="34" fill="#2a2825"/>
+            <!-- cutting wheel -->
+            <g id="wheel" transform="translate(-20 2)">
+              <circle r="30" fill="url(#wheelGrad)" stroke="#000" stroke-width="1.5"/>
+              <g fill="#d6c89a">
+                <rect x="-3" y="-30" width="6" height="6" rx="1"/>
+                <rect x="-3" y="-30" width="6" height="6" rx="1" transform="rotate(45)"/>
+                <rect x="-3" y="-30" width="6" height="6" rx="1" transform="rotate(90)"/>
+                <rect x="-3" y="-30" width="6" height="6" rx="1" transform="rotate(135)"/>
+                <rect x="-3" y="-30" width="6" height="6" rx="1" transform="rotate(180)"/>
+                <rect x="-3" y="-30" width="6" height="6" rx="1" transform="rotate(225)"/>
+                <rect x="-3" y="-30" width="6" height="6" rx="1" transform="rotate(270)"/>
+                <rect x="-3" y="-30" width="6" height="6" rx="1" transform="rotate(315)"/>
+              </g>
+              <circle r="8" fill="#1a1816" stroke="#444" stroke-width="1"/>
+              <circle r="2" fill="#666"/>
+            </g>
+          </g>
+
+          <!-- foreground grass blades -->
+          <g opacity=".8" stroke="#4a7c2a" stroke-width="1.5" stroke-linecap="round" fill="none">
+            <path d="M30 430 L34 418"/>
+            <path d="M70 430 L66 416"/>
+            <path d="M520 430 L524 416"/>
+            <path d="M560 430 L556 418"/>
+          </g>
+        </svg>
+
+        <!-- caption overlays -->
+      </div>
+    </div>
+
+    <div class="progress-rail" aria-hidden="true">
+      <div class="fill" id="progressFill"></div>
+      <div class="pct" id="progressPct">00%</div>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────────── SERVICES ─────────────── -->
+<section class="section" id="services">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div>
+        <span class="eyebrow">What we do</span>
+        <h2 style="margin-top:18px;">Specialized in stumps.<br/>Trained on whole trees.</h2>
+      </div>
+      <p class="lede">From the gnarliest oak stump in your front yard to a full tree removal after a storm — we show up with the right equipment and a clean truck.</p>
+    </div>
+
+    <div class="services">
+      <article class="svc feat reveal">
+        <div>
+          <div class="num">Specialty · 01</div>
+          <h3 style="font-size: clamp(28px, 3.4vw, 44px); margin-top:24px; max-width: 18ch;">Stump grinding &amp; removal — to 8&Prime; below grade.</h3>
+          <p class="desc" style="max-width:48ch; margin-top:16px;">Self-propelled grinders, narrow-gate access (36&Prime;), and a finish-rake that leaves your lawn ready for seed or sod. Most residential stumps done in under an hour.</p>
+          <div style="display:flex; gap:10px; margin-top:28px; flex-wrap:wrap;">
+            <span class="mono" style="font-size:11px; letter-spacing:.18em; text-transform:uppercase; color: var(--moss-2); border:1px solid color-mix(in oklab, var(--moss-2) 40%, transparent); padding: 8px 12px; border-radius:999px;">Carbide teeth</span>
+            <span class="mono" style="font-size:11px; letter-spacing:.18em; text-transform:uppercase; color: var(--moss-2); border:1px solid color-mix(in oklab, var(--moss-2) 40%, transparent); padding: 8px 12px; border-radius:999px;">Narrow-gate access</span>
+            <span class="mono" style="font-size:11px; letter-spacing:.18em; text-transform:uppercase; color: var(--moss-2); border:1px solid color-mix(in oklab, var(--moss-2) 40%, transparent); padding: 8px 12px; border-radius:999px;">Mulch backfill</span>
+          </div>
+        </div>
+        <div class="feat-art">
+          <div class="photo"></div>
+          <span class="tag">Field photo · Stump grind in progress</span>
+        </div>
+      </article>
+
+      <article class="svc reveal">
+        <div class="glyph">
+          <svg viewBox="0 0 24 24"><path d="M12 3v18"/><path d="M12 7c-3 0-5-2-5-4M12 7c3 0 5-2 5-4M12 12c-4 0-6-2-6-5M12 12c4 0 6-2 6-5"/></svg>
+        </div>
+        <div class="num" style="margin-top: 18px;">Service · 02</div>
+        <h3>Tree removal</h3>
+        <p class="desc">Safe takedowns of dead, damaged, or unwanted trees — close to structures, over fences, near power lines. Crane-assist available.</p>
+      </article>
+
+      <article class="svc reveal">
+        <div class="glyph">
+          <svg viewBox="0 0 24 24"><path d="M3 12h6l2-4 2 8 2-6 2 2h4"/></svg>
+        </div>
+        <div class="num" style="margin-top: 18px;">Service · 03</div>
+        <h3>Trimming &amp; pruning</h3>
+        <p class="desc">Crown reduction, deadwooding, structural pruning. ANSI A300 standards — we don't top trees.</p>
+      </article>
+
+      <article class="svc reveal">
+        <div class="glyph">
+          <svg viewBox="0 0 24 24"><path d="M3 18c2-4 5-6 9-6s7 2 9 6"/><path d="M7 14l-2-4M12 12V6M17 14l2-4"/></svg>
+        </div>
+        <div class="num" style="margin-top: 18px;">Service · 04</div>
+        <h3>Storm cleanup</h3>
+        <p class="desc">After the storm: limbs cleared, downed trees cut and hauled, debris removed. Insurance docs on request.</p>
+      </article>
+
+      <article class="svc reveal">
+        <div class="glyph">
+          <svg viewBox="0 0 24 24"><rect x="3" y="9" width="18" height="11" rx="1"/><path d="M7 9V5h10v4M3 13h18"/></svg>
+        </div>
+        <div class="num" style="margin-top: 18px;">Service · 05</div>
+        <h3>Lot &amp; brush clearing</h3>
+        <p class="desc">Clearing for new construction, fence lines, gardens, or property lines. Brush hauled or chipped on-site.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────────── PROCESS ─────────────── -->
+<section class="section process" id="how">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div>
+        <span class="eyebrow">How it works</span>
+        <h2 style="margin-top:18px;">Quote to clean site<br/>in four steps.</h2>
+      </div>
+      <p class="lede">Most jobs go from first call to finished in under a week. Same-day quotes during the busy season.</p>
+    </div>
+
+    <div class="steps">
+      <div class="step reveal">
+        <div class="n">01</div>
+        <h4>Call or text</h4>
+        <p>Tell us how many stumps, how big, and where. A photo helps. We answer fast.</p>
+      </div>
+      <div class="step reveal">
+        <div class="n">02</div>
+        <h4>Free quote</h4>
+        <p>Flat-rate price, no surprises. Most quotes given over the phone within an hour.</p>
+      </div>
+      <div class="step reveal">
+        <div class="n">03</div>
+        <h4>We grind</h4>
+        <p>We arrive in marked trucks, locate utilities, lay drop cloths if needed, and grind.</p>
+      </div>
+      <div class="step reveal">
+        <div class="n">04</div>
+        <h4>Clean site</h4>
+        <p>Mulch backfilled, lawn raked, debris hauled. You inspect before we pull out.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────────── REVIEWS ─────────────── -->
+<section class="section" id="reviews">
+  <div class="wrap">
+    <div class="reviews-head reveal">
+      <div>
+        <span class="eyebrow">What customers say</span>
+        <h2 style="margin-top:18px;">Two reviews. Both five stars.</h2>
+        <p style="margin-top: 14px; color: var(--ink-2); font-size: 15px; max-width: 48ch;">A new business, building a perfect rating one job at a time.</p>
+      </div>
+      <div class="rating-chip">
+        <div class="stars-big">★★★★★</div>
+        <div class="num">5.0<small>/ 5</small></div>
+        <div class="src">Google · 2 reviews</div>
+      </div>
+    </div>
+
+    <div class="review-grid">
+      <article class="review reveal">
+        <div class="quote-mark">“</div>
+        <blockquote>Carl was timely, and efficient and the cheapest in the area! He did miss a small root that was off to the side and not visible from the original grinding area however when I notified him about it he came out that same day and finished it off. Would recommend Asbury to anyone in the area!</blockquote>
+        <div class="who">
+          <div>
+            <div class="name">Tyler Girt</div>
+            <div class="stars" style="font-size:14px;">★★★★★</div>
+          </div>
+          <div class="meta">Google · Toledo, OH</div>
+        </div>
+      </article>
+
+      <article class="review reveal">
+        <div class="quote-mark">“</div>
+        <blockquote>Carl does a great job. Very professional, and on time! I will defiantly continue to help him.</blockquote>
+        <div class="who">
+          <div>
+            <div class="name">Jack Pasienza</div>
+            <div class="stars" style="font-size:14px;">★★★★★</div>
+          </div>
+          <div class="meta">Google · Toledo, OH</div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────────── SERVICE AREA ─────────────── -->
+<section class="section process" id="area" style="background: var(--bg-2);">
+  <div class="wrap">
+    <div class="area-grid">
+      <div class="reveal">
+        <span class="eyebrow">Where we work</span>
+        <h2 style="margin-top:18px;">Based in Toledo.<br/>Serving the whole Glass City.</h2>
+        <p style="margin-top:18px; color: var(--ink-2); max-width: 46ch;">
+          We cover Lucas County and the inner ring of Wood County. Outside that radius? Call — we still might be your guys.
+        </p>
+        <ul class="city-list">
+          <li>Toledo <span class="mono mi">HQ</span></li>
+          <li>Sylvania <span class="mono mi">~7 mi</span></li>
+          <li>Maumee <span class="mono mi">~9 mi</span></li>
+          <li>Perrysburg <span class="mono mi">~11 mi</span></li>
+          <li>Holland <span class="mono mi">~8 mi</span></li>
+          <li>Oregon <span class="mono mi">~6 mi</span></li>
+          <li>Rossford <span class="mono mi">~7 mi</span></li>
+          <li>Waterville <span class="mono mi">~13 mi</span></li>
+        </ul>
+      </div>
+
+      <div class="area-map reveal">
+        <svg viewBox="0 0 800 600" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Service area radius map centered on Toledo, Ohio">
+          <defs>
+            <radialGradient id="cov" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#4a7c2a" stop-opacity=".10"/>
+              <stop offset="70%" stop-color="#4a7c2a" stop-opacity=".04"/>
+              <stop offset="100%" stop-color="#4a7c2a" stop-opacity="0"/>
+            </radialGradient>
+            <radialGradient id="lakeHint" cx="100%" cy="0%" r="60%">
+              <stop offset="0%" stop-color="#a8c2cc" stop-opacity=".35"/>
+              <stop offset="100%" stop-color="#a8c2cc" stop-opacity="0"/>
+            </radialGradient>
+            <filter id="softShadow" x="-50%" y="-50%" width="200%" height="200%">
+              <feDropShadow dx="0" dy="1.5" stdDeviation="1.5" flood-color="#14211a" flood-opacity=".18"/>
+            </filter>
+          </defs>
+
+          <!-- paper bg -->
+          <rect width="800" height="600" fill="#f6eedb"/>
+
+          <!-- gentle lake hint in NE corner — geographic anchor only -->
+          <rect width="800" height="600" fill="url(#lakeHint)"/>
+          <text x="710" y="80" font-family="Georgia, 'Times New Roman', serif" font-style="italic" font-size="20" fill="#3e5e6a" letter-spacing="2" opacity=".7" text-anchor="middle">Lake Erie</text>
+
+          <!-- coverage zone -->
+          <circle cx="400" cy="300" r="240" fill="url(#cov)"/>
+
+          <!-- distance rings (5, 10, 15 mi) -->
+          <g fill="none" stroke="#1f3d20" stroke-dasharray="2 6" opacity=".35">
+            <circle cx="400" cy="300" r="80"/>
+            <circle cx="400" cy="300" r="160"/>
+            <circle cx="400" cy="300" r="240"/>
+          </g>
+
+          <!-- radial spokes from Toledo to each city -->
+          <g stroke="#1f3d20" stroke-width="1" opacity=".25" stroke-linecap="round">
+            <line x1="400" y1="300" x2="321" y2="221"/>
+            <line x1="400" y1="300" x2="336" y2="300"/>
+            <line x1="400" y1="300" x2="282" y2="349"/>
+            <line x1="400" y1="300" x2="298" y2="402"/>
+            <line x1="400" y1="300" x2="230" y2="419"/>
+            <line x1="400" y1="300" x2="354" y2="470"/>
+            <line x1="400" y1="300" x2="438" y2="405"/>
+            <line x1="400" y1="300" x2="496" y2="300"/>
+          </g>
+
+          <!-- ring labels (on north axis) -->
+          <g font-family="JetBrains Mono" font-size="10" fill="#6b7a6f" letter-spacing="1.5" text-anchor="middle">
+            <rect x="382" y="212" width="36" height="14" rx="2" fill="#f6eedb"/>
+            <text x="400" y="222">5 MI</text>
+            <rect x="378" y="132" width="44" height="14" rx="2" fill="#f6eedb"/>
+            <text x="400" y="142">10 MI</text>
+            <rect x="378" y="52" width="44" height="14" rx="2" fill="#f6eedb"/>
+            <text x="400" y="62">15 MI</text>
+          </g>
+
+          <!-- compass — minimal arrow + N -->
+          <g transform="translate(60 80)" font-family="JetBrains Mono" fill="#14211a">
+            <line x1="0" y1="-26" x2="0" y2="20" stroke="#14211a" stroke-width="1"/>
+            <path d="M0 -28 L5 -18 L0 -22 L-5 -18 Z" fill="#14211a"/>
+            <text x="0" y="-34" text-anchor="middle" font-size="10" letter-spacing="2" font-weight="700">N</text>
+          </g>
+
+          <!-- CITIES — placed at proper compass bearing & relative distance from Toledo -->
+          <g>
+            <!-- Sylvania · NW · 7 mi -->
+            <circle cx="321" cy="221" r="4.5" fill="#1f3d20"/>
+            <text x="333" y="217" font-family="Archivo" font-weight="700" font-size="14" fill="#14211a">Sylvania</text>
+            <text x="333" y="233" font-family="JetBrains Mono" font-size="10" fill="#6b7a6f" letter-spacing="1">7 mi · NW</text>
+
+            <!-- Ottawa Hills · W · 4 mi -->
+            <circle cx="336" cy="300" r="4.5" fill="#1f3d20"/>
+            <text x="276" y="284" text-anchor="middle" font-family="Archivo" font-weight="700" font-size="14" fill="#14211a">Ottawa Hills</text>
+            <text x="276" y="300" text-anchor="middle" font-family="JetBrains Mono" font-size="10" fill="#6b7a6f" letter-spacing="1">4 mi · W</text>
+
+            <!-- Holland · WSW · 8 mi -->
+            <circle cx="282" cy="349" r="4.5" fill="#1f3d20"/>
+            <text x="270" y="372" text-anchor="end" font-family="Archivo" font-weight="700" font-size="14" fill="#14211a">Holland</text>
+            <text x="270" y="388" text-anchor="end" font-family="JetBrains Mono" font-size="10" fill="#6b7a6f" letter-spacing="1">8 mi · W</text>
+
+            <!-- Maumee · SW · 9 mi -->
+            <circle cx="298" cy="402" r="4.5" fill="#1f3d20"/>
+            <text x="286" y="420" text-anchor="end" font-family="Archivo" font-weight="700" font-size="14" fill="#14211a">Maumee</text>
+            <text x="286" y="436" text-anchor="end" font-family="JetBrains Mono" font-size="10" fill="#6b7a6f" letter-spacing="1">9 mi · SW</text>
+
+            <!-- Waterville · SW · 13 mi -->
+            <circle cx="230" cy="419" r="4.5" fill="#1f3d20"/>
+            <text x="218" y="444" text-anchor="end" font-family="Archivo" font-weight="700" font-size="14" fill="#14211a">Waterville</text>
+            <text x="218" y="460" text-anchor="end" font-family="JetBrains Mono" font-size="10" fill="#6b7a6f" letter-spacing="1">13 mi · SW</text>
+
+            <!-- Perrysburg · S · 11 mi -->
+            <circle cx="354" cy="470" r="4.5" fill="#1f3d20"/>
+            <text x="366" y="466" font-family="Archivo" font-weight="700" font-size="14" fill="#14211a">Perrysburg</text>
+            <text x="366" y="482" font-family="JetBrains Mono" font-size="10" fill="#6b7a6f" letter-spacing="1">11 mi · S</text>
+
+            <!-- Rossford · SSE · 7 mi -->
+            <circle cx="438" cy="405" r="4.5" fill="#1f3d20"/>
+            <text x="450" y="401" font-family="Archivo" font-weight="700" font-size="14" fill="#14211a">Rossford</text>
+            <text x="450" y="417" font-family="JetBrains Mono" font-size="10" fill="#6b7a6f" letter-spacing="1">7 mi · SE</text>
+
+            <!-- Oregon · E · 6 mi -->
+            <circle cx="496" cy="300" r="4.5" fill="#1f3d20"/>
+            <text x="508" y="296" font-family="Archivo" font-weight="700" font-size="14" fill="#14211a">Oregon</text>
+            <text x="508" y="312" font-family="JetBrains Mono" font-size="10" fill="#6b7a6f" letter-spacing="1">6 mi · E</text>
+          </g>
+
+          <!-- TOLEDO HQ at center -->
+          <g filter="url(#softShadow)">
+            <circle cx="400" cy="300" r="28" fill="#1f3d20" opacity=".10"/>
+            <circle cx="400" cy="300" r="14" fill="#f6eedb" stroke="#1f3d20" stroke-width="2"/>
+            <circle cx="400" cy="300" r="8" fill="#1f3d20"/>
+            <circle cx="400" cy="300" r="3" fill="#6ea53d"/>
+          </g>
+          <circle cx="400" cy="300" r="14" fill="none" stroke="#6ea53d" stroke-width="2" opacity=".5">
+            <animate attributeName="r" values="14;38;14" dur="3.2s" repeatCount="indefinite"/>
+            <animate attributeName="opacity" values=".55;0;0" dur="3.2s" repeatCount="indefinite"/>
+          </circle>
+          <g>
+            <text x="424" y="297" font-family="Archivo" font-weight="800" font-size="20" fill="#14211a" letter-spacing=".5">Toledo</text>
+            <text x="424" y="316" font-family="JetBrains Mono" font-size="10" fill="#4a7c2a" letter-spacing="2">HQ · 43604</text>
+          </g>
+        </svg>
+
+        <div class="map-corner">
+          <span class="rule"></span>
+          <b>Service Area</b> · ~15 mi radius
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────────── CTA ─────────────── -->
+<section class="section cta" id="contact" style="padding: 100px 0;">
+  <div class="wrap cta-inner">
+    <div>
+      <span class="eyebrow" style="color: var(--moss-2);">Get a quote</span>
+      <h2 style="margin-top:18px;">Got a stump?<br/>Let's grind it out.</h2>
+      <p class="lede">Call, text, or fill out a quote request. Most stump jobs get a price the same day — and most get scheduled within the week.</p>
+      <div class="cta-buttons">
+        <a href="tel:+14193889884" class="btn btn-cta">Call (419) 388-9884</a>
+        <a href="sms:+14193889884" class="btn btn-line">Text us</a>
+      </div>
+    </div>
+    <div class="cta-card">
+      <div class="cta-row">
+        <span class="k">Phone</span>
+        <a href="tel:+14193889884" class="v big">(419) 388-9884</a>
+      </div>
+      <div class="cta-row">
+        <span class="k">Email</span>
+        <a href="mailto:asburyservices@outlook.com" class="v">asburyservices@outlook.com</a>
+      </div>
+      <div class="cta-row">
+        <span class="k">Service area</span>
+        <span class="v">Toledo · Lucas County, OH</span>
+      </div>
+      <div class="cta-row">
+        <span class="k">Hours</span>
+        <span class="v">Mon–Sat · 7a–7p</span>
+      </div>
+      <div class="cta-row">
+        <span class="k">Quotes</span>
+        <span class="v">Free · Same day</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────────── FOOTER ─────────────── -->
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div>
+        <div class="foot-mark">
+          <img src="assets/asbury-logo.png" alt="" />
+          <div>
+            <div>ASBURY SERVICES</div>
+            <span class="sub">Tree &amp; Stump · Toledo</span>
+          </div>
+        </div>
+        <p style="margin-top: 20px; max-width: 36ch; font-size: 14px; line-height: 1.6;">
+          Locally owned tree service in Toledo, Ohio. Specializing in stump grinding, removals, and the occasional emergency call after a bad storm.
+        </p>
+      </div>
+      <div>
+        <h5>Services</h5>
+        <ul>
+          <li><a href="#services">Stump grinding</a></li>
+          <li><a href="#services">Tree removal</a></li>
+          <li><a href="#services">Trimming &amp; pruning</a></li>
+          <li><a href="#services">Storm cleanup</a></li>
+          <li><a href="#services">Lot clearing</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Company</h5>
+        <ul>
+          <li><a href="#how">Our process</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#area">Service area</a></li>
+          <li><a href="#contact">Get a quote</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Contact</h5>
+        <ul>
+          <li><a href="tel:+14193889884">(419) 388-9884</a></li>
+          <li><a href="sms:+14193889884">Text us</a></li>
+          <li>Toledo, OH</li>
+          <li>Mon–Sat · 7a–7p</li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Asbury Services · Tree Service</span>
+      <span>Toledo, Ohio · Fully Insured</span>
+    </div>
+  </div>
+</footer>
+
+<a href="tel:+14193889884" class="mobile-call">
+  <span>Call us now</span>
+  <span class="num">(419) 388-9884</span>
+</a>
+
+<script>
+  /* ── nav stick ── */
+  const nav = document.getElementById('nav');
+  const onScroll = () => {
+    nav.classList.toggle('is-stuck', window.scrollY > 12);
+  };
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  /* ── reveal on scroll ── */
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  /* ── STUMP REMOVAL SCROLL ANIMATION ── */
+  const scene = document.getElementById('scene');
+  const stumpTop = document.getElementById('stump-top');
+  const stumpSide = document.getElementById('stump-side');
+  const stumpShadow = document.getElementById('stump-shadow');
+  const barkLines = document.getElementById('bark-lines');
+  const rings = document.getElementById('rings');
+  const grinder = document.getElementById('grinder');
+  const wheel = document.getElementById('wheel');
+  const dust = document.getElementById('dust');
+  const mound = document.getElementById('mound');
+  const mulch = document.getElementById('mulch');
+  const chipsLayer = document.getElementById('chips');
+  const progFill = document.getElementById('progressFill');
+  const progPct = document.getElementById('progressPct');
+  const phaseItems = document.querySelectorAll('.phase-item');
+
+  // pre-build a pool of chip elements
+  const CHIP_COUNT = 26;
+  const chips = [];
+  const svgNS = "http://www.w3.org/2000/svg";
+  for (let i = 0; i < CHIP_COUNT; i++) {
+    const chip = document.createElementNS(svgNS, 'rect');
+    const w = 4 + Math.random() * 6;
+    const h = 2 + Math.random() * 3;
+    chip.setAttribute('width', w);
+    chip.setAttribute('height', h);
+    chip.setAttribute('rx', 1);
+    chip.setAttribute('fill', ['#7a4a26','#a06840','#8a5a30','#d9a368','#5a3820'][i % 5]);
+    chip.dataset.angle = (Math.random() * 60 - 30 + (Math.random() > .5 ? 180 : 0));
+    chip.dataset.dist = 80 + Math.random() * 160;
+    chip.dataset.rot = Math.random() * 720 - 360;
+    chip.dataset.delay = Math.random();
+    chip.dataset.lift = 60 + Math.random() * 120;
+    chip.style.opacity = 0;
+    chipsLayer.appendChild(chip);
+    chips.push(chip);
+  }
+
+  const easeInOut = t => t<.5 ? 2*t*t : 1-Math.pow(-2*t+2,2)/2;
+  const clamp = (v,a,b) => Math.max(a, Math.min(b, v));
+  const lerp = (a,b,t) => a + (b-a) * t;
+
+  let lastProgress = -1;
+  function update() {
+    const rect = scene.getBoundingClientRect();
+    const vh = window.innerHeight;
+    const total = rect.height - vh;
+    const scrolled = clamp(-rect.top, 0, total);
+    const p = total > 0 ? scrolled / total : 0;
+
+    if (Math.abs(p - lastProgress) < 0.001) { requestAnimationFrame(update); return; }
+    lastProgress = p;
+
+    // progress rail
+    progFill.style.width = (p*100).toFixed(1) + '%';
+    progPct.textContent = String(Math.round(p*100)).padStart(2,'0') + '%';
+
+    // phase index 0..3
+    const phaseIdx = clamp(Math.floor(p / 0.25), 0, 3);
+    phaseItems.forEach((el, i) => el.classList.toggle('is-active', i === phaseIdx));
+
+    // ── Grinder enters from the right, parks left of stump, then backs off
+    // Phase A: 0 -> 0.20  enter
+    // Phase B: 0.20 -> 0.85  parked, grinding (small bobbing)
+    // Phase C: 0.85 -> 1.0  retreats
+    let grinderX, grinderY = 380;
+    if (p < 0.20) {
+      const t = easeInOut(p / 0.20);
+      grinderX = lerp(720, 360, t);
+    } else if (p < 0.85) {
+      const t = (p - 0.20) / 0.65;
+      grinderX = 360 + Math.sin(t * Math.PI * 8) * 4; // small bob
+      grinderY = 380 + Math.sin(t * Math.PI * 10) * 1.5;
+    } else {
+      const t = easeInOut((p - 0.85) / 0.15);
+      grinderX = lerp(360, 720, t);
+    }
+    grinder.setAttribute('transform', `translate(${grinderX} ${grinderY})`);
+
+    // wheel rotation — spins fast when grinding
+    const isGrinding = p > 0.18 && p < 0.88;
+    const baseSpin = (performance.now() / (isGrinding ? 2 : 8)) % 360;
+    wheel.setAttribute('transform', `translate(-20 2) rotate(${baseSpin})`);
+
+    // ── Stump shrinks from full to gone during 0.20 -> 0.80
+    let stumpProgress; // 0 full, 1 gone
+    if (p < 0.20) stumpProgress = 0;
+    else if (p > 0.80) stumpProgress = 1;
+    else stumpProgress = easeInOut((p - 0.20) / 0.60);
+
+    const STUMP_TOP_Y = 280;
+    const STUMP_BASE_Y = 426;
+    const STUMP_HEIGHT = STUMP_BASE_Y - STUMP_TOP_Y; // 146
+    const newTopY = STUMP_TOP_Y + STUMP_HEIGHT * stumpProgress;
+    const newHeight = STUMP_HEIGHT * (1 - stumpProgress);
+
+    stumpSide.setAttribute('y', newTopY);
+    stumpSide.setAttribute('height', newHeight);
+    stumpTop.setAttribute('cy', newTopY);
+
+    // shrink top ellipse radius slightly as we go below grade
+    const rx = lerp(90, 60, stumpProgress);
+    const ry = lerp(22, 6, stumpProgress);
+    stumpTop.setAttribute('rx', rx);
+    stumpTop.setAttribute('ry', ry);
+
+    // rings — collapse to small ellipses then fade
+    const ringEls = rings.querySelectorAll('ellipse');
+    ringEls.forEach((r, i) => {
+      const baseRx = [74,58,42,26,10][i];
+      const baseRy = [17,13,9,6,3][i];
+      r.setAttribute('cy', newTopY + (i === 2 ? 1 : 0));
+      r.setAttribute('rx', baseRx * (rx/90));
+      r.setAttribute('ry', baseRy * (ry/22));
+    });
+    rings.style.opacity = 0.85 * (1 - stumpProgress * 0.7);
+
+    // bark lines: redraw to match new height
+    const lines = barkLines.querySelectorAll('line');
+    lines.forEach((ln) => {
+      ln.setAttribute('y1', newTopY);
+    });
+    barkLines.style.opacity = 0.7 * (1 - stumpProgress);
+
+    // stump shadow shrinks
+    stumpShadow.setAttribute('rx', lerp(105, 75, stumpProgress));
+    stumpShadow.setAttribute('cy', 426);
+    stumpShadow.setAttribute('opacity', 0.35 * (1 - stumpProgress * 0.6));
+
+    // ── Dust cloud appears during grinding
+    let dustOpacity = 0;
+    if (p > 0.18 && p < 0.88) {
+      const dt = p < 0.30 ? (p - 0.18)/0.12 : (p > 0.80 ? (0.88 - p)/0.08 : 1);
+      dustOpacity = clamp(dt, 0, 1) * 0.85;
+    }
+    dust.style.opacity = dustOpacity;
+    // dust position follows top of stump
+    dust.setAttribute('transform', `translate(0 ${newTopY - 280}) scale(${0.7 + (1-stumpProgress)*0.3})`);
+
+    // ── Chips fly out during grinding
+    if (p > 0.18 && p < 0.88) {
+      const gProg = (p - 0.18) / 0.70;
+      chips.forEach((c, i) => {
+        const delay = parseFloat(c.dataset.delay);
+        const local = clamp((gProg - delay * 0.4) / (1 - delay * 0.4), 0, 1);
+        if (local <= 0) { c.style.opacity = 0; return; }
+        const cycle = (local * 3) % 1; // chips loop a few times across the section
+        const angle = parseFloat(c.dataset.angle) * Math.PI / 180;
+        const dist = parseFloat(c.dataset.dist);
+        const rot = parseFloat(c.dataset.rot);
+        const lift = parseFloat(c.dataset.lift);
+        const t = cycle;
+        const x = 300 + Math.sin(angle) * dist * t;
+        const y = newTopY - lift * Math.sin(t * Math.PI) + (t > 0.5 ? (t-0.5)*2*40 : 0);
+        const fade = t < 0.1 ? t*10 : (t > 0.85 ? (1-t)/0.15 : 1);
+        c.setAttribute('transform', `translate(${x} ${y}) rotate(${rot * t})`);
+        c.style.opacity = fade * 0.9;
+      });
+    } else {
+      chips.forEach(c => c.style.opacity = 0);
+    }
+
+    // ── Mulch fill in final phase
+    if (p > 0.82) {
+      const mp = clamp((p - 0.82) / 0.18, 0, 1);
+      mound.style.opacity = mp * 0.9;
+      mulch.style.opacity = easeInOut(mp);
+    } else {
+      mound.style.opacity = 0;
+      mulch.style.opacity = 0;
+    }
+
+    requestAnimationFrame(update);
+  }
+  requestAnimationFrame(update);
+</script>
+
+</body>
+</html>
