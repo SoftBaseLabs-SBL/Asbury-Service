@@ -184,7 +184,7 @@
     position: absolute; inset: 0;
     background-size: cover;
     background-position: center;
-    background-image: url("https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1200&q=80");
+    background-image: url("assets/hero-grinder.jpg");
   }
   .hero-card::after {
     content: "";
@@ -282,7 +282,40 @@
     padding: 0 48px;
   }
   @media (max-width: 920px){
-    .scene-sticky { grid-template-columns: 1fr; padding: 0 20px; gap: 0; }
+    .scene-sticky {
+      grid-template-columns: 1fr;
+      padding: 24px 20px 60px;
+      gap: 14px;
+      grid-template-rows: auto 1fr;
+      align-items: start;
+    }
+    .scene-stage {
+      grid-row: 1;
+      max-width: min(72vw, 360px);
+      margin: 0 auto;
+    }
+    .scene-copy {
+      grid-row: 2;
+      text-align: center;
+    }
+    .scene-copy h2 {
+      font-size: clamp(28px, 7vw, 40px);
+      max-width: none;
+      margin: 10px auto 0;
+    }
+    .scene-copy .eyebrow { justify-content: center; display: inline-flex; }
+    .scene-copy .phase {
+      margin-top: 16px;
+      border-left: 0;
+      border-top: 1px solid color-mix(in oklab, var(--moss-2) 40%, transparent);
+      padding: 18px 0 0;
+      min-height: 0;
+      /* show only the active phase on mobile */
+    }
+    .scene-copy .phase-item { display: none; padding: 0; }
+    .scene-copy .phase-item.is-active { display: block; }
+    .scene-copy .phase-item .ttl { font-size: 22px; }
+    .scene-copy .phase-item .txt { font-size: 14px; margin: 6px auto 0; max-width: 36ch; }
   }
 
   .scene-copy { position: relative; z-index: 3; }
@@ -325,8 +358,7 @@
   .progress-rail .fill { position:absolute; left:0; top:0; bottom:0; background: var(--moss-2); width: 0%; transition: width .1s linear; }
   .progress-rail .pct { position:absolute; right: 0; top:-22px; font-family: "JetBrains Mono", monospace; font-size: 11px; letter-spacing: .15em; color: color-mix(in oklab, var(--paper) 70%, transparent); }
   @media (max-width: 920px){
-    .progress-rail { left: 20px; right: 20px; bottom: 20px; }
-    .scene-stage { max-width: 360px; }
+    .progress-rail { left: 20px; right: 20px; bottom: 14px; }
   }
 
   /* ── SERVICES ────────────────────────────────────── */
@@ -584,7 +616,7 @@
   <div class="wrap">
     <div class="hero-grid">
       <div>
-        <span class="eyebrow">Toledo, OH · Est. Local · Fully Insured</span>
+        <span class="eyebrow">Toledo, OH · Open 24/7 · Fully Insured</span>
         <h1 style="margin-top:18px;">
           Stumps,<br/>
           <span class="grad">gone.</span>
@@ -607,7 +639,7 @@
           </div>
           <div class="m">
             <span class="k">Response</span>
-            <span class="v">Same-day quotes</span>
+            <span class="v">Open 24/7 · Same-day quotes</span>
           </div>
           <div class="m">
             <span class="k">Coverage</span>
@@ -617,10 +649,10 @@
       </div>
 
       <aside class="hero-card">
-        <div class="photo" role="img" aria-label="Forest canopy in northwest Ohio"></div>
-        <div class="tag">Toledo · NW Ohio</div>
+        <div class="photo" role="img" aria-label="Asbury Services stump grinder mid-job in Toledo"></div>
+        <div class="tag">Real Job · Toledo, OH</div>
         <div class="caption">
-          Hardwood country.<br/>We know its stumps.
+          On site, grinding.<br/>That's the work.
           <span class="sub">Lucas &amp; Wood Counties · 419</span>
         </div>
       </aside>
@@ -1176,7 +1208,7 @@
       </div>
       <div class="cta-row">
         <span class="k">Hours</span>
-        <span class="v">Open 24/7</span>
+        <span class="v">Open 24 hours · 7 days</span>
       </div>
       <div class="cta-row">
         <span class="k">Quotes</span>
@@ -1227,7 +1259,7 @@
           <li><a href="tel:+14193889884">(419) 388-9884</a></li>
           <li><a href="sms:+14193889884">Text us</a></li>
           <li>Toledo, OH</li>
-          <li>Open 24/7</li>
+          <li>Open 24 hours</li>
         </ul>
       </div>
     </div>
